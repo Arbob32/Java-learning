@@ -14,13 +14,10 @@ public class Randomizer {
 
     public static void printRandomNumbers(int count) {
         Random rand = new Random();
-        String result = new String();
 
         for (int i = 0; i < count; i++) {
             int randomNum = rand.nextInt(101);
-            result += String.valueOf(randomNum) + " ";
+            System.out.print(String.valueOf(randomNum) + " ");
         }
-
-        System.out.println(result);
     }
 }
