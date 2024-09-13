@@ -1,7 +1,7 @@
 package com.ru.vsgutu.first_chapter;
 
 public class PasswordValidator {
-    private final static String PASSWORD = "qwerty123";
+    private static final String PASSWORD = "qwerty123";
 
     public static void validatePassAndPrintResult(final String password) {
         if (password.equals(PASSWORD)) {
