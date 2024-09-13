@@ -33,6 +33,9 @@ public class App {
         // integerUtils.printUniqueDigitThreeDigitNumbers(); // Задание 5
         // integerUtils.printPrimeNumbers(); // Задание 6
         // integerUtils.printAscAndDescNumbers(); // Задание 7
-
+        // integerUtils.printDescFrequencyNumbers(); // Задание 8
+        // integerUtils.printHappyNumbers(); // Задание 9
+        // integerUtils.printPalindromeNumbers(); // Задание 10
+        integerUtils.printElementsWithNeighbors();
     }
 }

@@ -157,4 +157,120 @@ public class IntegerUtils {
         System.out.println("Сортировка по возрастанию: " + asc);
         System.out.println("Сортировка по убыванию: " + desc);
     }
+
+    public void printDescFrequencyNumbers() {
+        String result = new String();
+        Arrays.sort(intArray);
+        int[] uniqueNumbers = new int[intArray.length];
+        int[] uniqueNumbersFrequency = new int[intArray.length];
+
+        int j = 0;
+        int count = 0;
+
+        for (int i = 1; i < intArray.length; i++) {
+            if (intArray[i] == intArray[i - 1]) {
+                count += 1;
+            } else {
+                uniqueNumbers[j] = intArray[i - 1];
+                uniqueNumbersFrequency[j] = count;
+                count = 0;
+                j++;
+            }
+        }
+
+        // Добавить последнее уникальное число и его частоту
+        uniqueNumbers[j] = intArray[intArray.length - 1];
+        uniqueNumbersFrequency[j] = count;
+
+        // Создать массив индексов и отсортировать его в порядке убывания частот
+        Integer[] indices = new Integer[j + 1];
+        for (int i = 0; i < indices.length; i++) {
+            indices[i] = i;
+        }
+        Arrays.sort(indices, (a, b) -> uniqueNumbersFrequency[b] - uniqueNumbersFrequency[a]);
+
+        for (int i : indices) {
+            result += uniqueNumbers[i] + " ";
+        }
+
+        System.out.println("Числа в порядке убывания частоты встречаемости: " + result);
+    }
+
+    public void printHappyNumbers() {
+        String result = new String();
+
+        for (int i = 0; i < intArray.length; i++) {
+            if (isHappy(intArray[i])) {
+                result += intArray[i] + " ";
+            }
+        }
+
+        System.out.println("Счастливые числа: " + result);
+    }
+
+    private boolean isHappy(int number) {
+        int start = number;
+        boolean result = true;
+        int sumResult = 0;
+
+        while (sumResult != 1) {
+            sumResult = sumOfSquaresOfDigits(number);
+            number = sumResult;
+
+            if (sumResult == start) {
+                result = false;
+                break;
+            }
+        }
+
+        return result;
+    }
+
+    private int sumOfSquaresOfDigits(int num) {
+        int sum = 0;
+
+        while (num > 0) {
+            int digit = num % 10;
+            sum += digit * digit;
+            num /= 10;
+        }
+
+        return sum;
+    }
+
+    public void printPalindromeNumbers() {
+        String result = new String();
+
+        for (int i = 0; i < intArray.length; i++) {
+            if (isPalindrome(intArray[i])) {
+                result += intArray[i] + " ";
+            }
+        }
+
+        System.out.println("Числа палиндромы: " + result);
+    }
+
+    private boolean isPalindrome(int number) {
+        String str = Integer.toString(number);
+        
+        for (int i = 0; i < str.length(); i++) {
+            if (str.charAt(i) != str.charAt(str.length() - i - 1)) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public void printElementsWithNeighbors() {
+        String result = new String();
+
+        for (int i = 1; i < intArray.length - 1; i++) {
+            if (intArray[i] == (intArray[i - 1] + intArray[i + 1]) / 2) {
+                result += intArray[i] + " ";
+            }
+        }
+
+        System.out.println("Элементы, которые равны полусумме соседних элементов: " + result);
+    }
 }
