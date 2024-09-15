@@ -40,14 +40,14 @@ public class IntegerUtils {
     }
 
     public void printOddsAndEvens() {
-        String evens = new String();
-        String odds = new String();
+        StringBuilder evens = new StringBuilder();
+        StringBuilder odds = new StringBuilder();
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (intArray[i] % 2 == 0) {
-                evens += intArray[i] + " ";
+        for (int j : intArray) {
+            if (j % 2 == 0) {
+                evens.append(j).append(" ");
             } else {
-                odds += intArray[i] + " ";
+                odds.append(j).append(" ");
             }
         }
 
@@ -59,13 +59,13 @@ public class IntegerUtils {
         int min = intArray[0];
         int max = intArray[0];
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (intArray[i] > max) {
-                max = intArray[i];
+        for (int j : intArray) {
+            if (j > max) {
+                max = j;
             }
 
-            if (intArray[i] < min) {
-                min = intArray[i];
+            if (j < min) {
+                min = j;
             }
         }
 
@@ -74,11 +74,11 @@ public class IntegerUtils {
     }
 
     public void printMultiplesOfThreeOrNine() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (intArray[i] % 3 == 0) {
-                result += intArray[i] + " ";
+        for (int j : intArray) {
+            if (j % 3 == 0) {
+                result.append(j).append(" ");
             }
         }
 
@@ -86,11 +86,11 @@ public class IntegerUtils {
     }
 
     public void printMultiplesOfFiveAndSeven() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (intArray[i] % 7 == 0 && intArray[i] % 5 == 0) {
-                result += intArray[i] + " ";
+        for (int j : intArray) {
+            if (j % 7 == 0 && j % 5 == 0) {
+                result.append(j).append(" ");
             }
         }
 
@@ -98,16 +98,16 @@ public class IntegerUtils {
     }
 
     public void printUniqueDigitThreeDigitNumbers() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (intArray[i] >= 100 && intArray[i] <= 999) {
-                int hundreds = intArray[i] / 100;
-                int tens = (intArray[i] / 10) % 10;
-                int units = intArray[i] % 10;
+        for (int j : intArray) {
+            if (j >= 100 && j <= 999) {
+                int hundreds = j / 100;
+                int tens = (j / 10) % 10;
+                int units = j % 10;
 
                 if (hundreds != tens && tens != units && units != hundreds) {
-                    result += intArray[i] + " ";
+                    result.append(j).append(" ");
                 }
             }
         }
@@ -116,11 +116,11 @@ public class IntegerUtils {
     }
 
     public void printPrimeNumbers() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (isPrimeNumber(intArray[i])) {
-                result += intArray[i] + " ";
+        for (int j : intArray) {
+            if (isPrimeNumber(j)) {
+                result.append(j).append(" ");
             }
         }
 
@@ -143,15 +143,15 @@ public class IntegerUtils {
 
     public void printAscAndDescNumbers() {
         Arrays.sort(intArray);
-        String asc = new String();
-        String desc = new String();
+        StringBuilder asc = new StringBuilder();
+        StringBuilder desc = new StringBuilder();
 
-        for (int i = 0; i < intArray.length; i++) {
-            asc += intArray[i] + " ";
+        for (int j : intArray) {
+            asc.append(j).append(" ");
         }
 
         for (int i = intArray.length - 1; i > -1; i--) {
-            desc += intArray[i] + " ";
+            desc.append(intArray[i]).append(" ");
         }
 
         System.out.println("Сортировка по возрастанию: " + asc);
@@ -159,7 +159,7 @@ public class IntegerUtils {
     }
 
     public void printDescFrequencyNumbers() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
         Arrays.sort(intArray);
         int[] uniqueNumbers = new int[intArray.length];
         int[] uniqueNumbersFrequency = new int[intArray.length];
@@ -185,23 +185,23 @@ public class IntegerUtils {
         // Создать массив индексов и отсортировать его в порядке убывания частот
         Integer[] indices = new Integer[j + 1];
         for (int i = 0; i < indices.length; i++) {
-            indices[i] = i;
+            indices[i] = Integer.valueOf(i);
         }
         Arrays.sort(indices, (a, b) -> uniqueNumbersFrequency[b] - uniqueNumbersFrequency[a]);
 
         for (int i : indices) {
-            result += uniqueNumbers[i] + " ";
+            result.append(uniqueNumbers[i]).append(" ");
         }
 
         System.out.println("Числа в порядке убывания частоты встречаемости: " + result);
     }
 
     public void printHappyNumbers() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (isHappy(intArray[i])) {
-                result += intArray[i] + " ";
+        for (int j : intArray) {
+            if (isHappy(j)) {
+                result.append(j).append(" ");
             }
         }
 
@@ -239,11 +239,11 @@ public class IntegerUtils {
     }
 
     public void printPalindromeNumbers() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
 
-        for (int i = 0; i < intArray.length; i++) {
-            if (isPalindrome(intArray[i])) {
-                result += intArray[i] + " ";
+        for (int j : intArray) {
+            if (isPalindrome(j)) {
+                result.append(j).append(" ");
             }
         }
 
@@ -263,11 +263,11 @@ public class IntegerUtils {
     }
 
     public void printElementsWithNeighbors() {
-        String result = new String();
+        StringBuilder result = new StringBuilder();
 
         for (int i = 1; i < intArray.length - 1; i++) {
             if (intArray[i] == (intArray[i - 1] + intArray[i + 1]) / 2) {
-                result += intArray[i] + " ";
+                result.append(intArray[i]).append(" ");
             }
         }
 
