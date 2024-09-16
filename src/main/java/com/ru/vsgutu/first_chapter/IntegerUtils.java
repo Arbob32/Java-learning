@@ -252,7 +252,7 @@ public class IntegerUtils {
 
     private boolean isPalindrome(int number) {
         String str = Integer.toString(number);
-        
+
         for (int i = 0; i < str.length(); i++) {
             if (str.charAt(i) != str.charAt(str.length() - i - 1)) {
                 return false;

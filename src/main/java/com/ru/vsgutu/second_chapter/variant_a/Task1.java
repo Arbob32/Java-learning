@@ -12,7 +12,7 @@ public class Task1 {
         int maxLength = String.valueOf(intArray[0]).length();
         int minLength = String.valueOf(intArray[0]).length();
 
-        for (int number: intArray) {
+        for (int number : intArray) {
             int currentLength = String.valueOf(number).length();
 
             if (currentLength > maxLength) {
