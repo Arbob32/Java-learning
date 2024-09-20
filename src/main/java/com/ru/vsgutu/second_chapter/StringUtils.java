@@ -1,8 +1,8 @@
-package com.ru.vsgutu.second_chapter.variant_a;
+package com.ru.vsgutu.second_chapter;
 
 import java.util.Scanner;
 
-public class Utils {
+public class StringUtils {
     public static int[] scanAndGetNumbers() {
         Scanner scanner = new Scanner(System.in);
 

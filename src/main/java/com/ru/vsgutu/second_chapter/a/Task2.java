@@ -1,8 +1,10 @@
-package com.ru.vsgutu.second_chapter.variant_a;
+package com.ru.vsgutu.second_chapter.a;
+
+import com.ru.vsgutu.second_chapter.StringUtils;
 
 public class Task2 {
     public static void main(String[] args) {
-        int[] intArray = Utils.scanAndGetNumbers();
+        int[] intArray = StringUtils.scanAndGetNumbers();
         bubbleSortByLengthAscAndPrint(intArray);
     }
 
