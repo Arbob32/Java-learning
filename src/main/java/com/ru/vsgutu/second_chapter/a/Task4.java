@@ -2,11 +2,11 @@ package com.ru.vsgutu.second_chapter.a;
 
 import java.util.Arrays;
 
-import com.ru.vsgutu.second_chapter.StringUtils;
+import com.ru.vsgutu.second_chapter.Utils;
 
 public class Task4 {
     public static void main(String[] args) {
-        int[] intArray = StringUtils.scanAndGetNumbers();
+        int[] intArray = Utils.scanAndGetNumbers();
         printNumberWithMinUniqueDigits(intArray);
     }
 

@@ -1,10 +1,10 @@
 package com.ru.vsgutu.second_chapter.a;
 
-import com.ru.vsgutu.second_chapter.StringUtils;
+import com.ru.vsgutu.second_chapter.Utils;
 
 public class Task3 {
     public static void main(String[] args) {
-        int[] intArray = StringUtils.scanAndGetNumbers();
+        int[] intArray = Utils.scanAndGetNumbers();
         printNumbersWithLengthLessThanAvg(intArray);
     }
 
