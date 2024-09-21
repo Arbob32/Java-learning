@@ -18,7 +18,11 @@ public class Task4 {
             for (int j = 0; j < intMatrix[i].length; j++) {
                 if (intMatrix[i][j] > 0) {
                     if (firstPositiveFound) {
-                        System.out.println("\nSum between first and second positive numbers in row " + i + ": " + sum);
+                        System.out.println(
+                                "\nSum between first and second positive numbers in row "
+                                        + i
+                                        + ": "
+                                        + sum);
                         break;
                     } else {
                         firstPositiveFound = true;

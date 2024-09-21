@@ -1,7 +1,6 @@
 package com.ru.vsgutu.second_chapter.c;
 
 import com.ru.vsgutu.second_chapter.Utils;
-
 import java.util.Scanner;
 
 public class Task2 {

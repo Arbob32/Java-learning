@@ -1,7 +1,6 @@
 package com.ru.vsgutu.second_chapter.a;
 
 import com.ru.vsgutu.second_chapter.Utils;
-
 import java.util.Arrays;
 
 public class Task7 {

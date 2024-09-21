@@ -2,8 +2,6 @@ package com.ru.vsgutu.second_chapter.a;
 
 import com.ru.vsgutu.second_chapter.Utils;
 
-import java.util.Arrays;
-
 public class Task8 {
     public static void main(String[] args) {
         int[] intArray = Utils.scanAndGetNumbers();

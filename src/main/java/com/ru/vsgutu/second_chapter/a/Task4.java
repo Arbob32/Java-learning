@@ -1,8 +1,7 @@
 package com.ru.vsgutu.second_chapter.a;
 
-import java.util.Arrays;
-
 import com.ru.vsgutu.second_chapter.Utils;
+import java.util.Arrays;
 
 public class Task4 {
     public static void main(String[] args) {
