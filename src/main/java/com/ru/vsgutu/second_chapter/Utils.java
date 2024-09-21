@@ -38,9 +38,13 @@ public class Utils {
         return intMatrix;
     }
 
-    public static int scanAndGetInt() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("int: ");
-        return scanner.nextInt();
+    public static void printMatrix(int[][] intMatrix, String title) {
+        System.out.print("\n" + title);
+        for (int i = 0; i < intMatrix.length; i++) {
+            System.out.print("\n");
+            for (int j = 0; j < intMatrix[i].length; j++) {
+                System.out.printf("%4d", intMatrix[i][j]);
+            }
+        }
     }
 }
