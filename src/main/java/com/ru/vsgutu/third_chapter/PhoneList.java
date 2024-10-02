@@ -17,11 +17,15 @@ public class PhoneList {
     }
 
     public List<Phone> getPhonesWithExcessiveLocalCallTime(Duration maxLocalCallTime) {
-        return phones.stream().filter(p -> p.getTownCallTime() > maxLocalCallTime).collect(Collectors.toList());
+        return phones.stream()
+                .filter(p -> p.getTownCallTime() > maxLocalCallTime)
+                .collect(Collectors.toList());
     }
 
     public List<Phone> getPhonesWithLongDistanceCallTime() {
-        return phones.stream().filter(p -> p.getLongDistanceCallTime().getSeconds() > 0).collect(Collectors.toList());
+        return phones.stream()
+                .filter(p -> p.getLongDistanceCallTime().getSeconds() > 0)
+                .collect(Collectors.toList());
     }
 
     public List<Phone> getPhonesByAsc() {

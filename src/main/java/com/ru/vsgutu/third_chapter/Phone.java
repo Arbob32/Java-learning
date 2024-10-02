@@ -15,7 +15,16 @@ public class Phone {
 
     private Phone() {}
 
-    public Phone(long id, String name, String surname, String patronymic, long creditCardNumber, long debit, long credit, Duration townCallTime, Duration longDistanceCallTime) {
+    public Phone(
+            long id,
+            String name,
+            String surname,
+            String patronymic,
+            long creditCardNumber,
+            long debit,
+            long credit,
+            Duration townCallTime,
+            Duration longDistanceCallTime) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -103,19 +112,36 @@ public class Phone {
         this.longDistanceCallTime = longDistanceCallTime;
     }
 
-
     @Override
     public String toString() {
-        return "{" +
-            " id='" + getId() + "'" +
-            ", name='" + getName() + "'" +
-            ", surname='" + getSurname() + "'" +
-            ", patronymic='" + getPatronymic() + "'" +
-            ", creditCardNumber='" + getCreditCardNumber() + "'" +
-            ", debit='" + getDebit() + "'" +
-            ", credit='" + getCredit() + "'" +
-            ", townCallTime='" + getTownCallTime() + "'" +
-            ", longDistanceCallTime='" + getLongDistanceCallTime() + "'" +
-            "}";
+        return "{"
+                + " id='"
+                + getId()
+                + "'"
+                + ", name='"
+                + getName()
+                + "'"
+                + ", surname='"
+                + getSurname()
+                + "'"
+                + ", patronymic='"
+                + getPatronymic()
+                + "'"
+                + ", creditCardNumber='"
+                + getCreditCardNumber()
+                + "'"
+                + ", debit='"
+                + getDebit()
+                + "'"
+                + ", credit='"
+                + getCredit()
+                + "'"
+                + ", townCallTime='"
+                + getTownCallTime()
+                + "'"
+                + ", longDistanceCallTime='"
+                + getLongDistanceCallTime()
+                + "'"
+                + "}";
     }
 }
