@@ -1,5 +1,6 @@
-package com.ru.vsgutu.third_chapter;
+package com.ru.vsgutu.third_chapter.a;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -18,7 +19,7 @@ public class PhoneList {
 
     public List<Phone> getPhonesWithExcessiveLocalCallTime(Duration maxLocalCallTime) {
         return phones.stream()
-                .filter(p -> p.getTownCallTime() > maxLocalCallTime)
+                .filter(p -> p.getTownCallTime().getSeconds() > maxLocalCallTime.getSeconds())
                 .collect(Collectors.toList());
     }
 
@@ -29,6 +30,6 @@ public class PhoneList {
     }
 
     public List<Phone> getPhonesByAsc() {
-        return phones.stream().sorted(Comparator.comparing(p -> p.getFullName()));
+        return phones.stream().sorted(Comparator.comparing(Phone::getFullName)).collect(Collectors.toList());
     }
 }

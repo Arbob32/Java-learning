@@ -1,4 +1,4 @@
-package com.ru.vsgutu.third_chapter;
+package com.ru.vsgutu.third_chapter.a;
 
 import java.time.Duration;
 
@@ -8,12 +8,10 @@ public class Phone {
     private String surname;
     private String patronymic;
     private long creditCardNumber;
-    private long debit;
-    private long credit;
-    private Duration townCallTime = 0;
-    private Duration longDistanceCallTime = 0;
-
-    private Phone() {}
+    private long debit = 0;
+    private long credit = 0;
+    private Duration townCallTime = Duration.ofSeconds(0);
+    private Duration longDistanceCallTime = Duration.ofSeconds(0);
 
     public Phone(
             long id,
@@ -34,6 +32,14 @@ public class Phone {
         this.credit = credit;
         this.townCallTime = townCallTime;
         this.longDistanceCallTime = longDistanceCallTime;
+    }
+
+    public Phone(long id, String name, String surname, String patronymic, long creditCardNumber) {
+        this.id = id;
+        this.name = name;
+        this.surname = surname;
+        this.patronymic = patronymic;
+        this.creditCardNumber = creditCardNumber;
     }
 
     public long getId() {
@@ -137,10 +143,10 @@ public class Phone {
                 + getCredit()
                 + "'"
                 + ", townCallTime='"
-                + getTownCallTime()
+                + getTownCallTime().getSeconds()
                 + "'"
                 + ", longDistanceCallTime='"
-                + getLongDistanceCallTime()
+                + getLongDistanceCallTime().getSeconds()
                 + "'"
                 + "}";
     }
