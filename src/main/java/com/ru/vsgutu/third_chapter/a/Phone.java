@@ -1,4 +1,4 @@
-package com.ru.vsgutu.third_chapter;
+package com.ru.vsgutu.third_chapter.a;
 
 import java.time.Duration;
 
