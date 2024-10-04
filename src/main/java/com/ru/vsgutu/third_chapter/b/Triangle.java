@@ -1,9 +1,9 @@
 package com.ru.vsgutu.third_chapter.b;
 
 public class Triangle {
-    private double a;
-    private double b;
-    private double c;
+    private final double a;
+    private final double b;
+    private final double c;
 
     public Triangle(double a, double b, double c) {
         this.a = a;
@@ -30,5 +30,10 @@ public class Triangle {
     public double getArea() {
         double p = getPerimeter() / 2;
         return Math.sqrt(p * (p - a) * (p - b) * (p - c));
+    }
+
+    @Override
+    public String toString() {
+        return "Triangle{" + "a=" + a + ", b=" + b + ", c=" + c + '}';
     }
 }
