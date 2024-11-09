@@ -1,7 +1,10 @@
 package com.ru.vsgutu.third_chapter.c;
 
+import com.ru.vsgutu.first_chapter.CreditsDisplayer;
+
 public class C {
     public static void main(String[] args) {
+        CreditsDisplayer.display();
         Rational x1 = new Rational(1, 1);
         Rational y1 = new Rational(1, 2);
         Rational z1 = new Rational(1, 5);
