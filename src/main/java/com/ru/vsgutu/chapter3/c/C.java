@@ -1,7 +1,11 @@
 package com.ru.vsgutu.chapter3.c;
 
+import com.ru.vsgutu.first_chapter.CreditsDisplayer;
+
+// Мясников А. Б762-2 7 ВАРИАНТ
 public class C {
     public static void main(String[] args) {
+        CreditsDisplayer.display();
         Rational x1 = new Rational(1, 1);
         Rational y1 = new Rational(1, 2);
         Rational z1 = new Rational(1, 5);

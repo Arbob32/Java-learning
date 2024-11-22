@@ -5,8 +5,12 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Random;
 
+import com.ru.vsgutu.first_chapter.CreditsDisplayer;
+
+// Мясников А. Б762-2 7 ВАРИАНТ
 public class B {
     public static void main(String[] args) {
+        CreditsDisplayer.display();
         Random rand = new Random();
         List<Triangle> triangles = new ArrayList<>();
 
