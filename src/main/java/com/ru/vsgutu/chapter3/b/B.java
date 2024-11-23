@@ -1,11 +1,10 @@
 package com.ru.vsgutu.chapter3.b;
 
+import com.ru.vsgutu.chapter1.CreditsDisplayer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Random;
-
-import com.ru.vsgutu.chapter1.CreditsDisplayer;
 
 // Мясников А. Б762-2 7 ВАРИАНТ
 public class B {
