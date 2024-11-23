@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
+// Мясников А. Б762-2 7 ВАРИАНТ
 public class Main {
     public static void main(String[] args) {
         List<Student> students = new ArrayList<>();

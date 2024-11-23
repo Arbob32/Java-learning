@@ -3,6 +3,7 @@ package com.ru.vsgutu.chapter5;
 import java.util.ArrayList;
 import java.util.List;
 
+// Мясников А. Б762-2 7 ВАРИАНТ
 public class Europe {
     private final List<HistoryEvent> events;
 

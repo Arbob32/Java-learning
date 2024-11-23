@@ -2,6 +2,7 @@ package com.ru.vsgutu.chapter4.a;
 
 import java.util.Objects;
 
+// Мясников А. Б762-2 7 ВАРИАНТ
 public class Computer {
     private final Processor processor;
     private final Ram ram;

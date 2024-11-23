@@ -1,6 +1,6 @@
 package com.ru.vsgutu.chapter3.c;
 
-import com.ru.vsgutu.first_chapter.CreditsDisplayer;
+import com.ru.vsgutu.chapter1.CreditsDisplayer;
 
 // Мясников А. Б762-2 7 ВАРИАНТ
 public class C {

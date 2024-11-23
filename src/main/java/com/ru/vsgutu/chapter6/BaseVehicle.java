@@ -1,5 +1,6 @@
 package com.ru.vsgutu.chapter6;
 
+// Мясников А. Б762-2 7 ВАРИАНТ
 public abstract class BaseVehicle implements Vehicle {
     protected String regNumber;
     protected String brand;

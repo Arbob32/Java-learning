@@ -4,7 +4,7 @@ import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.ru.vsgutu.first_chapter.CreditsDisplayer;
+import com.ru.vsgutu.chapter1.CreditsDisplayer;
 
 // Мясников А. Б762-2 7 ВАРИАНТ
 public class A {
