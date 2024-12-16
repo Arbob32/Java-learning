@@ -1,11 +1,10 @@
 package com.ru.vsgutu.chapter7;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.*;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class StudentServiceTest {
     private final StudentServiceImpl studentService = new StudentServiceImpl();

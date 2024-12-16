@@ -1,6 +1,10 @@
 package com.ru.vsgutu.chapter4.b.equipment;
 
-public abstract class Equipment {
+import java.io.Serializable;
+
+public abstract class Equipment implements Serializable {
+    private static final long serialVersionUID = 1L;
+
     private final String name;
     private final double price;
     private final double weight;

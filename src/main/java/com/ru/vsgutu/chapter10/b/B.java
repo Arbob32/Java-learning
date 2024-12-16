@@ -1,5 +1,10 @@
-package com.ru.vsgutu.chapter4.b.equipment;
+package com.ru.vsgutu.chapter10.b;
 
+import com.ru.vsgutu.chapter4.b.equipment.Equipment;
+import com.ru.vsgutu.chapter4.b.equipment.Gloves;
+import com.ru.vsgutu.chapter4.b.equipment.Helmet;
+import com.ru.vsgutu.chapter4.b.equipment.Jacket;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
@@ -8,8 +13,14 @@ import java.util.stream.Collectors;
 
 public class B {
 
-    public static void main(String[] args) {
+    public static void start(String filename) {
         List<Equipment> equipmentList = new ArrayList<>();
+
+        try {
+            equipmentList = EquipmentConnector.loadEquipmentList(filename);
+        } catch (IOException | ClassNotFoundException e) {
+            System.out.println("Ошибка при загрузке списка" + e.getMessage());
+        }
 
         Scanner scanner = new Scanner(System.in);
 
@@ -36,6 +47,11 @@ public class B {
                     findEquipmentInPriceRange(equipmentList, scanner);
                     break;
                 case 5:
+                    try {
+                        EquipmentConnector.saveEquipmentList(equipmentList, filename);
+                    } catch (IOException e) {
+                        System.out.println("ошибка сохранения списка" + e.getMessage());
+                    }
                     System.exit(0);
                 default:
                     System.out.println("Некорректный выбор");

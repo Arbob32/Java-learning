@@ -1,8 +1,8 @@
 package com.ru.vsgutu.chapter9;
 
 import java.io.BufferedReader;
-import java.io.FileReader;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.io.IOException;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -41,7 +41,8 @@ public final class FloatNumUtils {
         return nums;
     }
 
-    public static double parseNumber(String numStr, String localeStr) throws NumberFormatException, ParseException {
+    public static double parseNumber(String numStr, String localeStr)
+            throws NumberFormatException, ParseException {
         Locale locale;
         switch (localeStr) {
             case "en":
@@ -77,4 +78,3 @@ public final class FloatNumUtils {
         return sum;
     }
 }
-

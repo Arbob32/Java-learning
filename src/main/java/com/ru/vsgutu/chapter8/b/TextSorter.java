@@ -28,4 +28,3 @@ public class TextSorter {
         return !word.isEmpty() ? (double) vowelCount / word.length() : 0;
     }
 }
-
