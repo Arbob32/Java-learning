@@ -12,7 +12,7 @@ public class ImageReceiverClient {
     private static final Logger LOGGER = Logger.getLogger(ImageReceiverClient.class.getName());
     private static final String SERVER_ADDRESS = "localhost";
     private static final int PORT = 4554;
-    private static final Path SAVE_PATH = Path.of("src/main/java/chapter14/a/received_image.jpg");
+    private static final Path SAVE_PATH = Path.of("src/main/java/com/ru/vsgutu/chapter14/a/received_image.jpg");
 
     public static void main(String[] args) {
         try (Socket socket = new Socket(SERVER_ADDRESS, PORT);

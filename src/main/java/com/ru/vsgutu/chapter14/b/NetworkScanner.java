@@ -2,8 +2,21 @@ package com.ru.vsgutu.chapter14.b;
 
 import java.io.IOException;
 import java.net.InetAddress;
+import java.util.Scanner;
 
 public class NetworkScanner {
+
+    public static void main(String[] args) throws IOException {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter start IP Address");
+        String ipStart = scanner.nextLine();
+        System.out.println("Enter end IP Address");
+        String ipEnd = scanner.nextLine();
+        System.out.println("Enter timeout");
+        int timeout = scanner.nextInt();
+
+        scanNetwork(ipStart, ipEnd, timeout);
+    }
 
     public static void scanNetwork(String startIp, String endIp, int timeout) {
         long start = ipToLong(startIp);

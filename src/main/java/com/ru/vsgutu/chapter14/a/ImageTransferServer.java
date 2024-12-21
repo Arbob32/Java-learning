@@ -16,9 +16,9 @@ public class ImageTransferServer {
     private static final int PORT = 4554;
     private static final List<Path> IMAGE_PATHS =
             List.of(
-                    Path.of("src/main/java/chapter14/a/mars.jpg"),
-                    Path.of("src/main/java/chapter14/a/pepsi.jpg"),
-                    Path.of("src/main/java/chapter14/a/twix.jpg"));
+                    Path.of("src/main/java/com/ru/vsgutu/chapter14/a/mars.jpg"),
+                    Path.of("src/main/java/com/ru/vsgutu/chapter14/a/pepsi.jpg"),
+                    Path.of("src/main/java/com/ru/vsgutu/chapter14/a/twix.jpg"));
 
     public static void main(String[] args) {
         if (IMAGE_PATHS.stream().noneMatch(Files::exists)) {
